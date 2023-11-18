@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chien 1</title>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos animaux de compagnie</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        display: grid;
+        place-content: center;
+      }
+      .header__menuBtn {
+        position: relative;
+        z-index: 10;
+      }
+      .noscroll,
+      .noscroll body {
+        overflow: hidden;
+      }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <button 
+          aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"class="header__menuBtn">
+          <img src="../public/icones/UimAlignJustify.svg" alt="menu burger">
+        </button>
+        <h1>Rex</h1>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+          <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/cats/">Les chats</a></li>
+            <li><a href="/dogs/">Les chiens</a></li>
+          </ul>
+        </nav>  
+      </header>
+      <img src="../public/img/dogs/19-animaux-qui-ne-se-rendent-pas-compte-de-leur-pouvoir-comique.jpg" alt="Rex">
 </body>
 </html>
