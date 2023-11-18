@@ -25,6 +25,20 @@
         .noscroll body {
           overflow: hidden;
         }
+        .animaux {
+        width: 400px;
+        height: auto;
+        }
+        .lien_relatif {
+        font-size: 50px;
+        line-height: 200%;
+        }
+        h1,h2,p,.lien_relatif {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+        width: 650px;
+        }
       </style>
 </head>
 <body>
@@ -36,9 +50,9 @@
       <h1>Les chats</h1>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/cats/">Les chats</a></li>
-          <li><a href="/dogs/">Les chiens</a></li>
+          <li><a class="lien_relatif" href="/">Accueil</a></li>
+          <li><a class="lien_relatif" href="/cats/">Les chats</a></li>
+          <li><a class="lien_relatif" href="/dogs/">Les chiens</a></li>
         </ul>
       </nav>  
     </header>
