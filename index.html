@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
+    <title>Nos animaux de compagnie</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <style>
       .menu {
@@ -32,19 +32,11 @@
     <!-- header>h1{Test de menu} -->
     <header>
       <button 
-        aria-controls="mainNav"
-        @click="menuIsOpen = ! menuIsOpen"
-        class="header__menuBtn"
-      >
-        menu
+        aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"class="header__menuBtn">
+        <img src="public/icones/UimAlignJustify.svg" alt="menu burger">
       </button>
-      <h1>Menu des animaux</h1>
-      <nav 
-        id="mainNav" 
-        x-show="menuIsOpen" 
-        x-transition.duration.800ms
-        class="menu"
-      >
+      <h1>Bienvenue sur "Nos animaux de compagnie"</h1>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
           <li><a href="cats/index.html">Chats</a></li>
           <li><a href="dogs/index.html">Chiens</a></li>
@@ -52,6 +44,7 @@
       </nav>  
     </header>
     <!-- h2>lorem2^p>lorem -->
+    <img src="public/img/chienetchat/chats-chiens-amis-ou-ennemis-sont-ils-faits-pour-entendre.jpg" class="animaux">
     <h2>Lorem, ipsum.</h2>
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
