@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our pets</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        display: grid;
+        place-content: center;
+      }
+      .header__menuBtn {
+        position: relative;
+        z-index: 10;
+      }
+      .noscroll,
+      .noscroll body {
+        overflow: hidden;
+      }
+      .animaux {
+        width: 400px;
+        height: auto;
+      }
+      .lien_relatif {
+        font-size: 50px;
+        line-height: 200%;
+      }
+      h1,h2,p,.lien_relatif {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        width: 650px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header>
+      <button 
+        aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"class="header__menuBtn">
+        <img src="../public/icones/UimAlignJustify.svg" alt="menu burger"> 
+      </button>
+      <h1>Welcome to "Our pets"</h1>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <ul>
+          <li><a class="lien_relatif" href="/">Accueil</a></li>
+          <li><a class="lien_relatif" href="/EN/cats/">Cats</a></li>
+          <li><a class="lien_relatif" href="/EN/dogs/">Dogs</a></li>
+        </ul>
+      </nav>  
+    </header>
+    <!-- h2>lorem2^p>lorem -->
+    <img src="../public/img/chienetchat/chats-chiens-amis-ou-ennemis-sont-ils-faits-pour-entendre.jpg" class="animaux">
+    <h2>Discover our articles:</h2>
+    <p>
+      <u>"Exploring the world of cats</u>
+    </p>
+    <p>Discover the fascinating feline world through the curious eyes and gentle paws of the most 
+      mysterious companions in our homes. In this article, let's dive together into the captivating 
+      universe of cats, these enigmatic creatures that have conquered our hearts for centuries.
+    </p>
+    <a href="/EN/cats/">See the article</a>
+    <p>
+      <u>At the heart of canine friendship</u>
+    </p>
+    <p>Embark on an affectionate adventure alongside our loyal four-legged companions. In this article, 
+      let's delve into the wonderful world of dogs, where unconditional love and canine intelligence 
+      come together to create unbreakable bonds.
+    </p>
+    <a href="/EN/dogs/">See the article</a>
+  </body>
+</html>
